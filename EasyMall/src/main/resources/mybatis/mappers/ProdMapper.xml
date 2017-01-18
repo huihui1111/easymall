@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.tedu.easymall.mapper.ProdMapper" >
+	<select id="findProdUseLimit" resultType="Products">
+		select * from products 
+		where name like #{name} 
+		and category like #{category} 
+		and price >=#{minprice} 
+		<![CDATA[and price<=#{maxprice}]]>
+	</select>
+	
+	<update id="update">
+		update products set 
+		name=#{name},price=#{price},category=#{category},pnum=#{pnum},imgurl=#{imgurl},desc=#{desc}
+		where id=#{id}
+	</update>
+</mapper>
