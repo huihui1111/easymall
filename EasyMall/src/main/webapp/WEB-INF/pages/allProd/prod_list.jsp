@@ -38,7 +38,7 @@
 				</div>
 				<div>
 					<div id="gotocart_div">
-						<a href="${app}/servlet/CartAddServlet?id=${prod.id}">加入购物车</a>
+						<a href="${app}/pages/cart/addCart.action?prodId=${prod.id}">加入购物车</a>
 					</div>					
 					<div id="say_div">
 						库存：${prod.pnum}

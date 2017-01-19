@@ -17,6 +17,14 @@ public class User {
 		this.role = role;
 	}
 	
+	public String getUserId(){
+		return this.id;
+	}
+	
+	public void setUserId(String userId){
+		this.id=userId;
+	}
+	
 	public String getId() {
 		return id;
 	}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.tedu.easymall.mapper.OrderMapper">
+
+	<insert id="addOrder">
+
+		insert into orders values
+		(#{id},#{money},#{paystate},#{receiverinfo},#{ordertime},#{user.id})
+	</insert>
+	<select id="findOrdersByUid" resultType="Orders">
+		select * from orders where user_id=#{id}
+	</select>
+
+	<select id="findOrderItemsByUid" resultType="OrderItem">
+		SELECT oi.*
+		FROM orders od,orderitem oi
+		WHERE od.id =
+		oi.order_id
+		AND od.user_id =#{id}
+	</select>
+</mapper>

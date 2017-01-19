@@ -6,7 +6,7 @@
   <link href="${app }/staticfile/css/prodInfo.css" rel="stylesheet" type="text/css">
   <script type="text/javascript">
   	function addCart(){
-  		window.location.href = "${app}/servlet/CartAddServlet?id=${prod.id}";
+  		window.location.href = "${app}/pages/cart/addCart.action?prodId=${prod.id}";
   	}
   </script>
 </head>

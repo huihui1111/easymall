@@ -172,7 +172,7 @@
 		}
 		
 		function toHome(){
-			top.location.href = "home.action";
+			top.body_frame.location.href = "body.action";
 		}
 		
 		function toLogin(path){
@@ -193,6 +193,14 @@
 		
 		function toBack(){
 			top.location.href="/pages/back/toBack.action";
+		}
+		
+		function toCart(path){
+			top.body_frame.location.href = path+"toCart.action";
+		}
+		
+		function toOrder(path){
+			top.body_frame.location.href = path+"list.action";
 		}
 </script>
 <body>
@@ -219,8 +227,8 @@
 			<input type="text" name=""/>
 			<input type="button" value="搜索"/>
 			<span id="goto">
-				<a id="goto_order" href="${app}/servlet/OrderListServlet">我的订单</a>
-				<a id="goto_cart" href="${app}/cart.jsp">我的购物车</a>
+				<a id="goto_order" href="#" onclick="toOrder('${app}/pages/order/');">我的订单</a>
+				<a id="goto_cart" href="#" onclick="toCart('${app}/pages/cart/');">我的购物车</a>
 			</span>
 			<img id="erwm" src="${app}/staticfile/img/head/qr.jpg"/>
 		</div>

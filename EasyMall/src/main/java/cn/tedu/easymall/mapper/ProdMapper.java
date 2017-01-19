@@ -27,4 +27,6 @@ public interface ProdMapper {
 
 	public void update(Products prod);
 
+	public void updatePnumAdd(@Param("productId")String productId, @Param("buynum")int buynum);
+
 }

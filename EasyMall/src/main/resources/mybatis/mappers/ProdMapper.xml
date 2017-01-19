@@ -14,4 +14,9 @@
 		name=#{name},price=#{price},category=#{category},pnum=#{pnum},imgurl=#{imgurl},desc=#{desc}
 		where id=#{id}
 	</update>
+	
+	<update id="updatePnumAdd">
+		update products set pnum = pnum+#{buynum} where
+		id=#{productId}
+	</update>
 </mapper>
